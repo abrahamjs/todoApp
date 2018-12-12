@@ -6,9 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start`  (not `ng serve ` for technical reasons works better this way) for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-The folder  BackEnd  contains the files and directories of the back end server, it should be run in an IDE such as IntelliJ IDEA ( oben backend directory on and hit Run)on port 8080 (`http://localhost:8080`)  before running the front-end angular app. It makes use of Spring Boot and H2 as in memory database. 
+The folder  Backend  contains the files and directories of the back end server, it should be run in an IDE such as IntelliJ IDEA ( oben backend directory on and hit Run)on port 8080 (`http://localhost:8080`)  before running the front-end angular app. It makes use of Spring Boot and H2 as in memory database. 
 
 ## Known Bugs
 
