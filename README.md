@@ -12,8 +12,7 @@ The folder  Backend  contains the files and directories of the back end server, 
 
 ## Known Bugs
 
-Date and time is not stored, just tittle and descprition of every todo item. 
-
+Date has an formal formatting and that makes it hard to validate.
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
