@@ -1,0 +1,36 @@
+.todoWrapperd {
+  border-bottom: 1px solid #efefef;
+  text-align: left;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  background: #deeaee;
+  padding: 20px; 
+  width: 80%;
+  
+}
+div.todoWrapper {
+  background: #deeaee;
+  padding: 20px; 
+  text-align: left;
+  margin-bottom: 10px;
+  width: 80%;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.removeTodo {
+  background: blue;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  box-shadow: 10px;
+  text-decoration-color: blue;
+  border-width: 2px;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 8px;
+  color: #cf3a29;
+  border-color: rgba(203, 20, 32, 0.4);
+  background-color: pink;
+  font-family: "Arial Black", Gadget, sans-serif;
+
+}

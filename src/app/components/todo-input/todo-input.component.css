@@ -1,0 +1,63 @@
+.todo-input-wrapper {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
+}
+.btn {
+  outline: none;
+  box-shadow: none;
+  border-width: 2px;
+  border-radius: 3px;
+  border-style: solid;
+  padding: 8px;
+}
+
+.btn-primary {
+  background: blue;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  box-shadow: 10px;
+  text-decoration-color: blue;
+  border-width: 2px;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 10px;
+  color: rgb(85, 128, 145);
+  border-color: rgba(203, 20, 32, 0.4);
+  background-color: lightblue;
+  width: 100px;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}

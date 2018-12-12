@@ -1,0 +1,7 @@
+<div class="todo-input-wrapper">
+    <input type="text" [(ngModel)]="title" value = {{title}} placeholder="Title"/><br>
+    <input type="text" [(ngModel)]="description" value = {{description}} placeholder="Description"/><br>
+    <b>Time:</b><input type="datetime-local" [(ngModel)]="time" id="meeting-time"
+    name="meeting-time" value="2018-06-12T19:30">
+    <button class="bt n btn-primary" (click)="addTodo()">Submit</button>
+</div>
