@@ -1,0 +1,25 @@
+<div *ngFor="let todo of (todos | async)"  (click)="onSelect(todo)">
+  <app-todo-item [todo]="todo"></app-todo-item>
+</div>
+
+<div *ngIf="selectedTodo">
+
+  <div class="inputform">
+    <h3> Edit {{selectedTodo.title | uppercase}} : </h3>
+
+    <label>Title:
+      <input [(ngModel)]="selectedTodo.title" placeholder="name">
+    </label>
+    <label>Description:
+      <input [(ngModel)]="selectedTodo.description" placeholder="description">
+    </label>
+    <label>Time:
+      <input type="datetime-local" [(ngModel)]="selectedTodo.time" id="meeting-time"
+             name="meeting-time" value="selectedTodo.time">
+    </label>
+    <button class="btn-primary" (click)="editTodo()">Submit</button>
+
+  </div>
+
+
+</div>

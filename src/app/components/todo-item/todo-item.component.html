@@ -2,6 +2,8 @@
     <button class="removeTodo"  (click)="removeTodo()">remove</button><b>{{todo.title}}</b>
     <br>
     <p>{{todo.description}}</p>
-    <i>Due on : {{todo.time.toString()}}</i>
+    <i>Due on : {{todo.time.toString() |  date:'medium' }}</i><br>
+    <button class="editTodo">Cick anywhere to edit</button>
 
   </div>
+

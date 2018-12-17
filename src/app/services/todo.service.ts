@@ -38,6 +38,11 @@ export class TodoService {
       .subscribe(() => this.getTodos());
 
   }
+  public editTodo(id: string,title: string, description: string, time: string)  {
+    this.http.put(`/todos/${id}`, {title, description,time}, {responseType: 'text'})
+      .subscribe(() => this.getTodos());
+
+  }
 
   public removeTodo(id: string): void {
     this.http.delete(`/todos/${id}`, {responseType: 'text'} )
