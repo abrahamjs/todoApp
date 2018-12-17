@@ -3,6 +3,7 @@ import { Todo } from '../classes/todo';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {HttpClient} from '@angular/common/http';
 import 'rxjs/add/operator/take';
+import 'rxjs/add/operator/catch';
 
 
 @Injectable()
@@ -16,29 +17,32 @@ export class TodoService {
     this.todos = new BehaviorSubject<Todo[]>([]);
   }
 
-   getTodos() {
+  getTodos() {
     this.http.get('/todos').subscribe((data: any) => {
-      const parsedTodos = data._embedded.todos.map(todo => {
-          return {
-            title: todo.title,
-            description: todo.description,
-            time: new Date(todo.time),
-            id: todo._links.self.href.split('/')[4]
-          };
-        });
+      const parsedTodos = data.map(todo => {
+        return {
+          title: todo.title,
+          description: todo.description,
+          time: new Date(todo.time),
+          id: todo.id
+          //id: todo._links.self.href.split('/')[4]
+        };
+      });
+      console.log(data);
       this.todos.next(parsedTodos);
     });
-   }
+  }
 
-   public addTodo(title: string, description: string, time: string)  {
-    this.http.post('/todos', {title, description,time})
+  public addTodo(title: string, description: string, time: string)  {
+    this.http.post('/todos', {title, description,time}, {responseType: 'text'})
       .subscribe(() => this.getTodos());
 
-   }
+  }
 
-   public removeTodo(id: string): void {
-    this.http.delete(`/todos/${id}`)
+  public removeTodo(id: string): void {
+    this.http.delete(`/todos/${id}`, {responseType: 'text'} )
       .subscribe(() => this.getTodos());
-   }
+  }
 
 }
+
